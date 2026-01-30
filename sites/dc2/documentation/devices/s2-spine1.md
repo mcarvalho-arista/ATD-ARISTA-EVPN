@@ -12,6 +12,7 @@
   - [Internal VLAN Allocation Policy Summary](#internal-vlan-allocation-policy-summary)
   - [Internal VLAN Allocation Policy Device Configuration](#internal-vlan-allocation-policy-device-configuration)
 - [Interfaces](#interfaces)
+  - [Switchport Default](#switchport-default)
   - [Ethernet Interfaces](#ethernet-interfaces)
   - [Loopback Interfaces](#loopback-interfaces)
 - [Routing](#routing)
@@ -112,6 +113,19 @@ vlan internal order ascending range 1006 1199
 ```
 
 ## Interfaces
+
+### Switchport Default
+
+#### Switchport Defaults Summary
+
+- Default Switchport Mode: routed
+
+#### Switchport Default Device Configuration
+
+```eos
+!
+switchport default mode routed
+```
 
 ### Ethernet Interfaces
 
@@ -304,18 +318,18 @@ ASN Notation: asplain
 
 | Neighbor | Remote AS | VRF | Shutdown | Send-community | Maximum-routes | Allowas-in | BFD | RIB Pre-Policy Retain | Route-Reflector Client | Passive | TTL Max Hops |
 | -------- | --------- | --- | -------- | -------------- | -------------- | ---------- | --- | --------------------- | ---------------------- | ------- | ------------ |
-| 10.1.0.102 | 65199 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
-| 10.1.0.104 | 65199 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
-| 10.1.0.114 | 65101 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
-| 10.1.0.115 | 65102 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
-| 10.1.0.116 | 65101 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
-| 10.1.0.117 | 65102 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
-| 10.255.1.149 | 65199 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.1.157 | 65199 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.1.197 | 65101 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.1.201 | 65102 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.1.205 | 65101 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
-| 10.255.1.209 | 65102 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
+| 10.1.0.102 | 65202 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
+| 10.1.0.104 | 65204 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
+| 10.1.0.114 | 65214 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
+| 10.1.0.115 | 65215 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
+| 10.1.0.116 | 65216 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
+| 10.1.0.117 | 65217 | default | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | Inherited from peer group EVPN-OVERLAY-LOCAL-PEERS | - | - | - | - |
+| 10.255.1.149 | 65202 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
+| 10.255.1.157 | 65204 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
+| 10.255.1.197 | 65214 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
+| 10.255.1.201 | 65215 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
+| 10.255.1.205 | 65216 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
+| 10.255.1.209 | 65217 | default | - | Inherited from peer group IPV4-UNDERLAY-PEERS | Inherited from peer group IPV4-UNDERLAY-PEERS | - | - | - | - | - | - |
 
 #### Router BGP EVPN Address Family
 
@@ -351,40 +365,40 @@ router bgp 65100
    neighbor IPV4-UNDERLAY-PEERS send-community
    neighbor IPV4-UNDERLAY-PEERS maximum-routes 12000
    neighbor 10.1.0.102 peer group EVPN-OVERLAY-LOCAL-PEERS
-   neighbor 10.1.0.102 remote-as 65199
+   neighbor 10.1.0.102 remote-as 65202
    neighbor 10.1.0.102 description s2-brdr1
    neighbor 10.1.0.104 peer group EVPN-OVERLAY-LOCAL-PEERS
-   neighbor 10.1.0.104 remote-as 65199
+   neighbor 10.1.0.104 remote-as 65204
    neighbor 10.1.0.104 description s2-brdr2
    neighbor 10.1.0.114 peer group EVPN-OVERLAY-LOCAL-PEERS
-   neighbor 10.1.0.114 remote-as 65101
+   neighbor 10.1.0.114 remote-as 65214
    neighbor 10.1.0.114 description s2-leaf1
    neighbor 10.1.0.115 peer group EVPN-OVERLAY-LOCAL-PEERS
-   neighbor 10.1.0.115 remote-as 65102
+   neighbor 10.1.0.115 remote-as 65215
    neighbor 10.1.0.115 description s2-leaf3
    neighbor 10.1.0.116 peer group EVPN-OVERLAY-LOCAL-PEERS
-   neighbor 10.1.0.116 remote-as 65101
+   neighbor 10.1.0.116 remote-as 65216
    neighbor 10.1.0.116 description s2-leaf2
    neighbor 10.1.0.117 peer group EVPN-OVERLAY-LOCAL-PEERS
-   neighbor 10.1.0.117 remote-as 65102
+   neighbor 10.1.0.117 remote-as 65217
    neighbor 10.1.0.117 description s2-leaf4
    neighbor 10.255.1.149 peer group IPV4-UNDERLAY-PEERS
-   neighbor 10.255.1.149 remote-as 65199
+   neighbor 10.255.1.149 remote-as 65202
    neighbor 10.255.1.149 description s2-brdr1_Ethernet2
    neighbor 10.255.1.157 peer group IPV4-UNDERLAY-PEERS
-   neighbor 10.255.1.157 remote-as 65199
+   neighbor 10.255.1.157 remote-as 65204
    neighbor 10.255.1.157 description s2-brdr2_Ethernet2
    neighbor 10.255.1.197 peer group IPV4-UNDERLAY-PEERS
-   neighbor 10.255.1.197 remote-as 65101
+   neighbor 10.255.1.197 remote-as 65214
    neighbor 10.255.1.197 description s2-leaf1_Ethernet2
    neighbor 10.255.1.201 peer group IPV4-UNDERLAY-PEERS
-   neighbor 10.255.1.201 remote-as 65102
+   neighbor 10.255.1.201 remote-as 65215
    neighbor 10.255.1.201 description s2-leaf3_Ethernet2
    neighbor 10.255.1.205 peer group IPV4-UNDERLAY-PEERS
-   neighbor 10.255.1.205 remote-as 65101
+   neighbor 10.255.1.205 remote-as 65216
    neighbor 10.255.1.205 description s2-leaf2_Ethernet2
    neighbor 10.255.1.209 peer group IPV4-UNDERLAY-PEERS
-   neighbor 10.255.1.209 remote-as 65102
+   neighbor 10.255.1.209 remote-as 65217
    neighbor 10.255.1.209 description s2-leaf4_Ethernet2
    redistribute connected route-map RM-CONN-2-BGP
    !

@@ -27,6 +27,9 @@ bgp_peer_groups:
 ##################################################
 spine:
   defaults:
+    structured_config:
+      switchport_default:
+        mode: routed
     platform: ceos
     bgp_as: 65100
     loopback_ipv4_pool: 10.1.0.0/24
@@ -50,15 +53,17 @@ spine:
 l3leaf:
   defaults:
     platform: ceos
+    bgp_as: 65101-65299
     loopback_ipv4_pool: 10.1.0.0/24
     vtep_loopback_ipv4_pool: 10.1.1.0/24
     uplink_interfaces: [Ethernet2, Ethernet3]
     uplink_switches: [s2-spine1, s2-spine2]
     uplink_ipv4_pool: 10.255.0.0/22
-    mlag_interfaces: [Ethernet1, Ethernet6]
-    mlag_peer_ipv4_pool: 192.0.0.0/24
-    mlag_peer_l3_ipv4_pool: 192.1.1.0/24
-    mlag_port_channel_id: 1000
+    mlag: false
+    # mlag_interfaces: [Ethernet1, Ethernet6]
+    # mlag_peer_ipv4_pool: 192.0.0.0/24
+    # mlag_peer_l3_ipv4_pool: 192.1.1.0/24
+    # mlag_port_channel_id: 1000
     virtual_router_mac_address: 00:1c:73:00:00:01
     bgp_defaults:
       - 'no bgp default ipv4-unicast'
@@ -88,7 +93,7 @@ l3leaf:
       filter:
         tenants: [ATD_DC]
         tags: ['DC']
-      bgp_as: 65199
+      # bgp_as: 65098-65099
       evpn_gateway:
         evpn_l2:
           enabled: true
@@ -105,7 +110,7 @@ l3leaf:
           mgmt_ip: 192.168.0.200/24
           uplink_switch_interfaces: [Ethernet7, Ethernet7]
           uplink_interfaces: [Ethernet2, Ethernet3]
-          mlag_interfaces: [Ethernet1, Ethernet6]
+          # mlag_interfaces: [Ethernet1, Ethernet6]
           structured_config:
             router_bgp:
               neighbors:
@@ -122,7 +127,7 @@ l3leaf:
           mgmt_ip: 192.168.0.201/24
           uplink_switch_interfaces: [Ethernet8, Ethernet8]
           uplink_interfaces: [Ethernet2, Ethernet3]
-          mlag_interfaces: [Ethernet1, Ethernet6]
+          # mlag_interfaces: [Ethernet1, Ethernet6]
           structured_config:
             router_bgp:
               neighbors:
@@ -142,7 +147,7 @@ l3leaf:
       filter:
         tenants: [ATD_DC]
         tags: ['DC']
-      bgp_as: 65101
+      # bgp_as: 65101
       nodes:
         - name: s2-leaf1
           id: 114
@@ -160,7 +165,7 @@ l3leaf:
       filter:
         tenants: [ATD_DC]
         tags: ['DC']
-      bgp_as: 65102
+      # bgp_as: 65102
       nodes:
         - name: s2-leaf3
           id: 115

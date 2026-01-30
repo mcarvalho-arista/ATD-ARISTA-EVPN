@@ -37,22 +37,16 @@
 
 | Type | Node | Node Interface | Peer Type | Peer Node | Peer Interface |
 | ---- | ---- | -------------- | --------- | ----------| -------------- |
-| l3leaf | s2-brdr1 | Ethernet1 | mlag_peer | s2-brdr2 | Ethernet1 |
 | l3leaf | s2-brdr1 | Ethernet2 | spine | s2-spine1 | Ethernet7 |
 | l3leaf | s2-brdr1 | Ethernet3 | spine | s2-spine2 | Ethernet7 |
-| l3leaf | s2-brdr1 | Ethernet6 | mlag_peer | s2-brdr2 | Ethernet6 |
 | l3leaf | s2-brdr2 | Ethernet2 | spine | s2-spine1 | Ethernet8 |
 | l3leaf | s2-brdr2 | Ethernet3 | spine | s2-spine2 | Ethernet8 |
-| l3leaf | s2-leaf1 | Ethernet1 | mlag_peer | s2-leaf2 | Ethernet1 |
 | l3leaf | s2-leaf1 | Ethernet2 | spine | s2-spine1 | Ethernet2 |
 | l3leaf | s2-leaf1 | Ethernet3 | spine | s2-spine2 | Ethernet2 |
-| l3leaf | s2-leaf1 | Ethernet6 | mlag_peer | s2-leaf2 | Ethernet6 |
 | l3leaf | s2-leaf2 | Ethernet2 | spine | s2-spine1 | Ethernet3 |
 | l3leaf | s2-leaf2 | Ethernet3 | spine | s2-spine2 | Ethernet3 |
-| l3leaf | s2-leaf3 | Ethernet1 | mlag_peer | s2-leaf4 | Ethernet1 |
 | l3leaf | s2-leaf3 | Ethernet2 | spine | s2-spine1 | Ethernet4 |
 | l3leaf | s2-leaf3 | Ethernet3 | spine | s2-spine2 | Ethernet4 |
-| l3leaf | s2-leaf3 | Ethernet6 | mlag_peer | s2-leaf4 | Ethernet6 |
 | l3leaf | s2-leaf4 | Ethernet2 | spine | s2-spine1 | Ethernet5 |
 | l3leaf | s2-leaf4 | Ethernet3 | spine | s2-spine2 | Ethernet5 |
 
@@ -111,8 +105,8 @@
 | POD | Node | Loopback1 |
 | --- | ---- | --------- |
 | dc2_fabric | s2-brdr1 | 10.1.1.102/32 |
-| dc2_fabric | s2-brdr2 | 10.1.1.102/32 |
+| dc2_fabric | s2-brdr2 | 10.1.1.104/32 |
 | dc2_fabric | s2-leaf1 | 10.1.1.114/32 |
-| dc2_fabric | s2-leaf2 | 10.1.1.114/32 |
+| dc2_fabric | s2-leaf2 | 10.1.1.116/32 |
 | dc2_fabric | s2-leaf3 | 10.1.1.115/32 |
-| dc2_fabric | s2-leaf4 | 10.1.1.115/32 |
+| dc2_fabric | s2-leaf4 | 10.1.1.117/32 |

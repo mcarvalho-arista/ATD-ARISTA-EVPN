@@ -42,64 +42,64 @@ router_bgp:
   neighbors:
   - ip_address: 10.255.1.197
     peer_group: IPV4-UNDERLAY-PEERS
-    remote_as: '65101'
+    remote_as: '65214'
     peer: s2-leaf1
     description: s2-leaf1_Ethernet2
   - ip_address: 10.255.1.205
     peer_group: IPV4-UNDERLAY-PEERS
-    remote_as: '65101'
+    remote_as: '65216'
     peer: s2-leaf2
     description: s2-leaf2_Ethernet2
   - ip_address: 10.255.1.201
     peer_group: IPV4-UNDERLAY-PEERS
-    remote_as: '65102'
+    remote_as: '65215'
     peer: s2-leaf3
     description: s2-leaf3_Ethernet2
   - ip_address: 10.255.1.209
     peer_group: IPV4-UNDERLAY-PEERS
-    remote_as: '65102'
+    remote_as: '65217'
     peer: s2-leaf4
     description: s2-leaf4_Ethernet2
   - ip_address: 10.255.1.149
     peer_group: IPV4-UNDERLAY-PEERS
-    remote_as: '65199'
+    remote_as: '65202'
     peer: s2-brdr1
     description: s2-brdr1_Ethernet2
   - ip_address: 10.255.1.157
     peer_group: IPV4-UNDERLAY-PEERS
-    remote_as: '65199'
+    remote_as: '65204'
     peer: s2-brdr2
     description: s2-brdr2_Ethernet2
   - ip_address: 10.1.0.102
     peer_group: EVPN-OVERLAY-LOCAL-PEERS
     peer: s2-brdr1
     description: s2-brdr1
-    remote_as: '65199'
+    remote_as: '65202'
   - ip_address: 10.1.0.104
     peer_group: EVPN-OVERLAY-LOCAL-PEERS
     peer: s2-brdr2
     description: s2-brdr2
-    remote_as: '65199'
+    remote_as: '65204'
   - ip_address: 10.1.0.114
     peer_group: EVPN-OVERLAY-LOCAL-PEERS
     peer: s2-leaf1
     description: s2-leaf1
-    remote_as: '65101'
+    remote_as: '65214'
   - ip_address: 10.1.0.116
     peer_group: EVPN-OVERLAY-LOCAL-PEERS
     peer: s2-leaf2
     description: s2-leaf2
-    remote_as: '65101'
+    remote_as: '65216'
   - ip_address: 10.1.0.115
     peer_group: EVPN-OVERLAY-LOCAL-PEERS
     peer: s2-leaf3
     description: s2-leaf3
-    remote_as: '65102'
+    remote_as: '65215'
   - ip_address: 10.1.0.117
     peer_group: EVPN-OVERLAY-LOCAL-PEERS
     peer: s2-leaf4
     description: s2-leaf4
-    remote_as: '65102'
+    remote_as: '65217'
   address_family_evpn:
     peer_groups:
     - name: EVPN-OVERLAY-LOCAL-PEERS
@@ -211,3 +211,5 @@ router_bfd:
     multiplier: 3
 metadata:
   platform: ceos
+switchport_default:
+  mode: routed
